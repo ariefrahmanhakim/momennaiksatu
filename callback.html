@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok Auth Callback</title>
+<style>
+  body { font-family: monospace; max-width: 700px; margin: 60px auto; padding: 0 20px; }
+  #code { background: #f0f0f0; padding: 12px; word-break: break-all; font-size: 14px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<h2>Authorization Code</h2>
+<p>Copy kode di bawah dan kirim ke Jarvis:</p>
+<div id="code">Loading...</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  const error = params.get('error');
+  if (code) {
+    document.getElementById('code').textContent = code;
+  } else if (error) {
+    document.getElementById('code').textContent = 'Error: ' + error + ' — ' + params.get('error_description');
+  } else {
+    document.getElementById('code').textContent = 'No code found. URL: ' + window.location.href;
+  }
+</script>
+</body>
+</html>
