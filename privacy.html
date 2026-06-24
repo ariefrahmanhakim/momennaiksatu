@@ -5,35 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kebijakan Privasi — MomenNaikSatu</title>
 <style>
-  body { font-family: sans-serif; max-width: 700px; margin: 60px auto; padding: 0 20px; color: #222; line-height: 1.7; }
-  h1 { color: #e63946; }
-  h2 { margin-top: 2em; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; color: #333; line-height: 1.7; }
+  h1 { color: #e63946; margin-bottom: 4px; }
+  h2 { color: #e63946; margin-top: 2em; margin-bottom: 0.5em; }
+  p { margin-bottom: 12px; }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  .updated { color: #888; font-size: 0.9rem; margin-bottom: 32px; }
+  a { color: #e63946; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #eee; font-size: 0.9rem; color: #888; }
 </style>
 </head>
 <body>
+
 <h1>Kebijakan Privasi</h1>
-<p><strong>Terakhir diperbarui:</strong> 19 Juni 2026</p>
+<p class="updated"><strong>Terakhir diperbarui:</strong> 25 Juni 2026</p>
 
-<p>MomenNaikSatu ("kami") menghormati privasi pengguna dan berkomitmen untuk melindungi informasi pribadi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengelola data ketika Anda berinteraksi dengan konten kami.</p>
+<p>MomenNaikSatu ("kami", "aplikasi") menghormati privasi pengguna dan berkomitmen untuk melindungi informasi yang terkait dengan penggunaan layanan kami. Kebijakan Privasi ini menjelaskan data apa yang kami kumpulkan, bagaimana kami menggunakannya, berapa lama kami menyimpannya, dan hak-hak Anda sebagai pengguna.</p>
 
-<h2>1. Informasi yang Kami Kumpulkan</h2>
-<p>Kami tidak mengumpulkan informasi pribadi secara langsung dari penonton. Interaksi dengan konten kami (like, komentar, subscribe) dikelola oleh platform masing-masing (TikTok, YouTube, Instagram) sesuai kebijakan privasi mereka.</p>
+<h2>1. Data yang Kami Kumpulkan</h2>
+<p>Aplikasi ini hanya digunakan oleh pengelola channel MomenNaikSatu. Data yang dikumpulkan melalui integrasi TikTok API meliputi:</p>
+<ul>
+  <li><strong>Informasi profil dasar</strong>: open ID TikTok, nama tampilan, URL avatar — digunakan untuk memverifikasi akun yang diotorisasi.</li>
+  <li><strong>Token akses OAuth</strong>: token yang dikeluarkan oleh TikTok setelah proses otorisasi — digunakan untuk mengunggah dan memposting konten atas nama akun yang diotorisasi.</li>
+</ul>
+<p>Kami <strong>tidak</strong> mengumpulkan informasi pribadi dari penonton atau pengikut channel. Interaksi seperti like, komentar, dan follow dikelola sepenuhnya oleh platform TikTok sesuai kebijakan privasi mereka.</p>
 
-<h2>2. Penggunaan API Platform</h2>
-<p>Kami menggunakan API resmi TikTok, YouTube, dan Instagram untuk memposting konten secara otomatis. Data akun creator (token akses) disimpan secara aman di server pribadi dan tidak dibagikan kepada pihak ketiga.</p>
+<h2>2. Cara Kami Menggunakan Data</h2>
+<p>Data yang dikumpulkan digunakan semata-mata untuk:</p>
+<ul>
+  <li>Mengotentikasi akun TikTok pengelola channel.</li>
+  <li>Mengunggah dan memposting video konten secara terjadwal menggunakan TikTok Content Posting API (<code>video.upload</code>, <code>video.publish</code>).</li>
+</ul>
+<p>Data tidak digunakan untuk tujuan iklan, analitik pihak ketiga, atau dibagikan kepada siapapun selain pengelola aplikasi.</p>
 
-<h2>3. Cookie dan Pelacakan</h2>
-<p>Situs ini tidak menggunakan cookie atau teknologi pelacakan pihak ketiga.</p>
+<h2>3. Penyimpanan dan Retensi Data</h2>
+<p>Token akses TikTok disimpan dalam variabel lingkungan terenkripsi pada server pribadi pengelola channel dan tidak pernah di-hardcode dalam kode sumber atau disimpan dalam database publik.</p>
+<p><strong>Periode retensi:</strong></p>
+<ul>
+  <li>Token akses disimpan selama akun TikTok aktif diotorisasi ke aplikasi ini.</li>
+  <li>Token akan dihapus segera setelah pengguna mencabut otorisasi atau mengajukan permintaan penghapusan data.</li>
+  <li>Log aktivitas (waktu posting, ID video) disimpan maksimal <strong>90 hari</strong> untuk keperluan debugging, setelah itu dihapus otomatis.</li>
+</ul>
 
-<h2>4. Keamanan Data</h2>
-<p>Kami menggunakan langkah-langkah keamanan yang wajar untuk melindungi informasi. Token API disimpan dalam variabel lingkungan yang terenkripsi dan tidak pernah di-hardcode dalam kode sumber.</p>
+<h2>4. Hak Pengguna</h2>
+<p>Sebagai pengguna yang telah mengotorisasi aplikasi ini, Anda memiliki hak untuk:</p>
+<ul>
+  <li><strong>Mengakses data</strong>: Meminta informasi tentang data apa saja yang kami simpan terkait akun Anda.</li>
+  <li><strong>Menghapus data</strong>: Meminta penghapusan semua data terkait akun Anda. Lihat <a href="data-deletion.html">halaman penghapusan data</a> atau hubungi kami di bawah.</li>
+  <li><strong>Mencabut otorisasi</strong>: Anda dapat mencabut akses aplikasi ini kapan saja melalui pengaturan TikTok (<em>Settings → Security → Apps and Websites</em>). Pencabutan otorisasi akan menonaktifkan akses aplikasi secara instan.</li>
+</ul>
 
-<h2>5. Perubahan Kebijakan</h2>
-<p>Kebijakan ini dapat diperbarui sewaktu-waktu. Perubahan akan dipublikasikan di halaman ini.</p>
+<h2>5. Cookie dan Pelacakan</h2>
+<p>Situs web ini tidak menggunakan cookie, pixel tracking, atau teknologi pelacakan pihak ketiga apapun.</p>
 
-<h2>6. Kontak</h2>
-<p>Pertanyaan: <a href="mailto:ariefhakim.mail@gmail.com">ariefhakim.mail@gmail.com</a></p>
+<h2>6. Keamanan Data</h2>
+<p>Kami menerapkan langkah-langkah keamanan berikut:</p>
+<ul>
+  <li>Token API disimpan sebagai variabel lingkungan terenkripsi, tidak pernah dalam plaintext.</li>
+  <li>Akses server dibatasi dan dilindungi dengan autentikasi SSH key.</li>
+  <li>Kode sumber tidak memuat credential apapun.</li>
+</ul>
 
-<p><a href="index.html">← Kembali</a></p>
+<h2>7. Perubahan Kebijakan</h2>
+<p>Kebijakan ini dapat diperbarui sewaktu-waktu. Perubahan signifikan akan dipublikasikan di halaman ini dengan tanggal pembaruan yang diperbarui.</p>
+
+<h2>8. Kontak</h2>
+<p>Untuk pertanyaan, permintaan akses data, atau permintaan penghapusan data:</p>
+<p>Email: <a href="mailto:ariefhakim.mail@gmail.com">ariefhakim.mail@gmail.com</a></p>
+
+<footer>
+  <a href="index.html">← Kembali ke Beranda</a> &nbsp;·&nbsp;
+  <a href="tos.html">Syarat &amp; Ketentuan</a> &nbsp;·&nbsp;
+  <a href="data-deletion.html">Hapus Data</a>
+</footer>
+
 </body>
 </html>

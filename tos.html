@@ -5,38 +5,71 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Syarat &amp; Ketentuan — MomenNaikSatu</title>
 <style>
-  body { font-family: sans-serif; max-width: 700px; margin: 60px auto; padding: 0 20px; color: #222; line-height: 1.7; }
-  h1 { color: #e63946; }
-  h2 { margin-top: 2em; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 760px; margin: 0 auto; padding: 40px 20px; color: #333; line-height: 1.7; }
+  h1 { color: #e63946; margin-bottom: 4px; }
+  h2 { color: #e63946; margin-top: 2em; margin-bottom: 0.5em; }
+  p { margin-bottom: 12px; }
+  ul { padding-left: 20px; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+  .updated { color: #888; font-size: 0.9rem; margin-bottom: 32px; }
+  a { color: #e63946; }
+  .highlight { background: #fff8f8; border-left: 4px solid #e63946; padding: 12px 16px; margin: 16px 0; border-radius: 4px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #eee; font-size: 0.9rem; color: #888; }
 </style>
 </head>
 <body>
+
 <h1>Syarat &amp; Ketentuan</h1>
-<p><strong>Terakhir diperbarui:</strong> 19 Juni 2026</p>
+<p class="updated"><strong>Terakhir diperbarui:</strong> 25 Juni 2026</p>
 
-<p>Dengan mengakses dan menonton konten MomenNaikSatu, Anda setuju dengan syarat dan ketentuan berikut.</p>
+<p>Syarat dan Ketentuan ini mengatur penggunaan aplikasi dan layanan MomenNaikSatu, termasuk integrasi dengan platform TikTok melalui TikTok for Developers API. Dengan menggunakan aplikasi ini, Anda menyatakan setuju dengan ketentuan berikut.</p>
 
-<h2>1. Penggunaan Konten</h2>
-<p>Semua konten yang dipublikasikan oleh MomenNaikSatu (video, teks, grafis) adalah milik MomenNaikSatu. Dilarang menyalin, mendistribusikan ulang, atau menggunakan konten untuk tujuan komersial tanpa izin tertulis.</p>
+<h2>1. Tentang Layanan</h2>
+<p>Aplikasi MomenNaikSatu adalah alat otomasi pengunggahan konten video untuk channel MomenNaikSatu di platform TikTok. Layanan ini <strong>tidak tersedia untuk publik umum</strong> dan hanya dapat diakses oleh pengelola channel yang telah mendapatkan otorisasi.</p>
 
-<h2>2. Akses API</h2>
-<p>Aplikasi ini menggunakan API TikTok, YouTube, dan Instagram secara resmi untuk keperluan pembuatan dan pengunggahan konten oleh pemilik akun. Akses API dibatasi hanya untuk pengelola channel MomenNaikSatu.</p>
+<h2>2. Integrasi TikTok dan Izin yang Diminta</h2>
+<p>Aplikasi ini menggunakan TikTok for Developers API dan meminta izin (scope) berikut dari akun TikTok yang diotorisasi:</p>
+<div class="highlight">
+  <ul>
+    <li><strong><code>user.info.basic</code></strong> (disertakan dalam Login Kit): Membaca informasi profil dasar — open ID, nama tampilan, avatar — untuk keperluan verifikasi identitas akun.</li>
+    <li><strong><code>video.upload</code></strong> (disertakan dalam Content Posting API): Mengunggah konten video ke akun creator sebagai draft yang dapat ditinjau sebelum dipublikasikan.</li>
+    <li><strong><code>video.publish</code></strong> (disertakan dalam Content Posting API): Memposting konten video secara langsung ke profil TikTok akun yang telah memberikan otorisasi.</li>
+  </ul>
+</div>
+<p>Izin-izin di atas digunakan <strong>semata-mata</strong> untuk keperluan pengunggahan dan pengelolaan konten channel MomenNaikSatu oleh pengelola yang berwenang. Tidak ada akses ke data penonton, data follower, atau informasi pribadi pihak lain.</p>
 
-<h2>3. Konten Pihak Ketiga</h2>
-<p>Konten kami dapat mereferensikan sumber pihak ketiga. Kami tidak bertanggung jawab atas keakuratan atau ketersediaan sumber tersebut.</p>
+<h2>3. Otorisasi Pengguna</h2>
+<p>Dengan memberikan otorisasi kepada aplikasi ini melalui TikTok Login Kit, Anda menyatakan:</p>
+<ul>
+  <li>Anda adalah pemilik atau pengelola sah dari akun TikTok yang diotorisasi.</li>
+  <li>Anda memberikan izin kepada aplikasi untuk mengakses dan menggunakan scope yang tercantum di atas atas nama akun Anda.</li>
+  <li>Anda dapat mencabut otorisasi kapan saja melalui pengaturan TikTok (<em>Settings → Security → Apps and Websites</em>).</li>
+</ul>
 
-<h2>4. Pembatasan Tanggung Jawab</h2>
-<p>Konten MomenNaikSatu bersifat informatif dan edukatif. Kami tidak bertanggung jawab atas keputusan yang dibuat berdasarkan konten kami.</p>
+<h2>4. Kepemilikan Konten</h2>
+<p>Semua konten yang dipublikasikan melalui aplikasi ini (video, teks, grafis) adalah milik MomenNaikSatu. Dilarang menyalin, mendistribusikan ulang, atau menggunakan konten untuk tujuan komersial tanpa izin tertulis dari pengelola.</p>
 
-<h2>5. Perubahan Syarat</h2>
-<p>Kami berhak mengubah syarat ini kapan saja. Perubahan berlaku segera setelah dipublikasikan.</p>
+<h2>5. Kepatuhan terhadap Kebijakan TikTok</h2>
+<p>Penggunaan aplikasi ini tunduk pada <a href="https://www.tiktok.com/legal/page/global/terms-of-service/en" target="_blank" rel="noopener">Syarat Layanan TikTok</a> dan <a href="https://developers.tiktok.com/doc/overview-policy" target="_blank" rel="noopener">TikTok Developer Policy</a>. Kami berkomitmen untuk mematuhi seluruh kebijakan TikTok dalam penggunaan API mereka.</p>
 
-<h2>6. Hukum yang Berlaku</h2>
-<p>Syarat ini tunduk pada hukum Republik Indonesia.</p>
+<h2>6. Pembatasan Tanggung Jawab</h2>
+<p>Konten MomenNaikSatu bersifat informatif dan edukatif. Kami tidak bertanggung jawab atas keputusan yang dibuat berdasarkan konten yang dipublikasikan. Kami juga tidak bertanggung jawab atas gangguan layanan yang disebabkan oleh perubahan pada API platform pihak ketiga (TikTok, YouTube, Instagram).</p>
 
-<h2>7. Kontak</h2>
-<p>Pertanyaan: <a href="mailto:ariefhakim.mail@gmail.com">ariefhakim.mail@gmail.com</a></p>
+<h2>7. Perubahan Syarat</h2>
+<p>Kami berhak mengubah syarat ini kapan saja. Perubahan akan dipublikasikan di halaman ini dengan tanggal pembaruan yang diperbarui. Penggunaan berkelanjutan setelah perubahan dianggap sebagai persetujuan terhadap syarat yang baru.</p>
 
-<p><a href="index.html">← Kembali</a></p>
+<h2>8. Hukum yang Berlaku</h2>
+<p>Syarat ini tunduk pada hukum Republik Indonesia. Setiap perselisihan akan diselesaikan melalui musyawarah atau jalur hukum yang berlaku di Indonesia.</p>
+
+<h2>9. Kontak</h2>
+<p>Pertanyaan atau keberatan terkait syarat ini dapat disampaikan ke:</p>
+<p>Email: <a href="mailto:ariefhakim.mail@gmail.com">ariefhakim.mail@gmail.com</a></p>
+
+<footer>
+  <a href="index.html">← Kembali ke Beranda</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Kebijakan Privasi</a> &nbsp;·&nbsp;
+  <a href="data-deletion.html">Hapus Data</a>
+</footer>
+
 </body>
 </html>

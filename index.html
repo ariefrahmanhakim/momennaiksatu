@@ -3,19 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MomenNaikSatu</title>
+<title>MomenNaikSatu — Konten Edukasi & Motivasi Indonesia</title>
 <style>
-  body { font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; color: #222; }
-  h1 { color: #e63946; }
-  a { color: #e63946; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #222; background: #fff; }
+  header { background: #e63946; color: #fff; padding: 40px 20px; text-align: center; }
+  header h1 { font-size: 2rem; margin-bottom: 8px; }
+  header p { font-size: 1.1rem; opacity: 0.9; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
+  section { margin-bottom: 40px; }
+  h2 { color: #e63946; font-size: 1.2rem; margin-bottom: 12px; border-bottom: 2px solid #e63946; padding-bottom: 6px; }
+  p { line-height: 1.7; margin-bottom: 12px; color: #444; }
+  ul { padding-left: 20px; line-height: 1.9; color: #444; }
+  .scope-box { background: #f9f9f9; border-left: 4px solid #e63946; padding: 16px 20px; border-radius: 4px; margin-top: 12px; }
+  .scope-box code { font-family: monospace; background: #eee; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  footer { background: #f4f4f4; text-align: center; padding: 24px 20px; font-size: 0.9rem; color: #888; }
+  footer a { color: #e63946; text-decoration: none; margin: 0 10px; }
+  footer a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-<h1>MomenNaikSatu</h1>
-<p>Konten edukasi motivasi untuk Indonesia.</p>
-<p>
-  <a href="privacy.html">Kebijakan Privasi</a> ·
-  <a href="tos.html">Syarat &amp; Ketentuan</a>
-</p>
+
+<header>
+  <h1>MomenNaikSatu</h1>
+  <p>Konten edukasi dan motivasi untuk anak muda Indonesia</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Tentang MomenNaikSatu</h2>
+    <p>MomenNaikSatu adalah channel konten edukasi dan motivasi yang ditujukan untuk anak muda Indonesia usia 18–30 tahun. Konten kami meliputi tiga pilar utama: <strong>Motivasi</strong> (mindset shift), <strong>Pengetahuan</strong> (sains dan psikologi), dan <strong>Fakta</strong> (informasi mengejutkan tentang dunia sekitar kita).</p>
+    <p>Channel ini aktif di YouTube Shorts, Instagram Reels, dan TikTok.</p>
+  </section>
+
+  <section>
+    <h2>Tentang Aplikasi Ini</h2>
+    <p>Aplikasi <strong>MomenNaikSatu</strong> adalah alat otomasi pengunggahan konten yang digunakan oleh pengelola channel untuk memposting video secara terjadwal ke platform TikTok.</p>
+    <p>Aplikasi ini <strong>tidak tersedia untuk publik umum</strong>. Akses hanya diberikan kepada pengelola channel MomenNaikSatu (pemilik akun TikTok terdaftar).</p>
+  </section>
+
+  <section>
+    <h2>Integrasi TikTok</h2>
+    <p>Aplikasi ini menggunakan TikTok for Developers API untuk keperluan berikut:</p>
+    <div class="scope-box">
+      <ul>
+        <li><code>user.info.basic</code> — Membaca informasi profil dasar akun TikTok (open ID, nama tampilan, avatar) untuk verifikasi akun yang diotorisasi.</li>
+        <li><code>video.upload</code> — Mengunggah video ke akun creator sebagai draft untuk ditinjau dan diposting lebih lanjut melalui aplikasi TikTok.</li>
+        <li><code>video.publish</code> — Memposting video secara langsung ke profil TikTok akun yang telah memberikan otorisasi.</li>
+      </ul>
+    </div>
+    <p style="margin-top:16px;">Proses otorisasi dilakukan melalui <strong>TikTok Login Kit</strong>. Pengguna diarahkan ke halaman login resmi TikTok, memberikan izin, dan diarahkan kembali ke aplikasi. Token akses yang diperoleh disimpan secara aman dan hanya digunakan untuk keperluan pengunggahan konten.</p>
+  </section>
+
+  <section>
+    <h2>Alur Penggunaan</h2>
+    <ol style="padding-left:20px; line-height:1.9; color:#444;">
+      <li>Pengelola channel login ke aplikasi menggunakan akun TikTok mereka melalui TikTok Login Kit.</li>
+      <li>Setelah otorisasi, aplikasi menyimpan token akses secara aman di server pribadi.</li>
+      <li>Pada jadwal yang ditentukan, aplikasi otomatis mengunggah video yang telah disiapkan ke TikTok menggunakan Content Posting API.</li>
+      <li>Pengelola dapat meninjau dan mengkonfirmasi postingan melalui aplikasi TikTok.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Keamanan & Privasi</h2>
+    <p>Kami berkomitmen untuk menjaga keamanan data. Token akses TikTok disimpan dalam variabel lingkungan terenkripsi pada server pribadi dan tidak pernah dibagikan kepada pihak ketiga. Lihat <a href="privacy.html">Kebijakan Privasi</a> kami untuk detail lengkap.</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 MomenNaikSatu &nbsp;|&nbsp;
+    <a href="privacy.html">Kebijakan Privasi</a>
+    <a href="tos.html">Syarat &amp; Ketentuan</a>
+    <a href="data-deletion.html">Hapus Data</a>
+  </p>
+  <p style="margin-top:8px;">Pertanyaan: <a href="mailto:ariefhakim.mail@gmail.com">ariefhakim.mail@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
