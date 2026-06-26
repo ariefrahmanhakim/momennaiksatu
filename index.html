@@ -5,12 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MomenNaikSatu</title>
 <link rel="icon" type="image/png" href="app-icon-1024.png">
+<link rel="shortcut icon" href="app-icon-1024.png">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #222; background: #fff; }
   header { background: #e63946; color: #fff; padding: 40px 20px; text-align: center; }
-  header h1 { font-size: 2rem; margin-bottom: 8px; }
-  header p { font-size: 1.1rem; opacity: 0.9; }
+  .header-brand { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 10px; }
+  .header-brand img { width: 56px; height: 56px; border-radius: 12px; border: 2px solid rgba(255,255,255,0.4); }
+  header h1 { font-size: 2rem; }
+  header p { font-size: 1.1rem; opacity: 0.9; margin-top: 6px; }
   main { max-width: 760px; margin: 0 auto; padding: 40px 20px; }
   section { margin-bottom: 40px; }
   h2 { color: #e63946; font-size: 1.2rem; margin-bottom: 12px; border-bottom: 2px solid #e63946; padding-bottom: 6px; }
@@ -18,6 +21,12 @@
   ul { padding-left: 20px; line-height: 1.9; color: #444; }
   .scope-box { background: #f9f9f9; border-left: 4px solid #e63946; padding: 16px 20px; border-radius: 4px; margin-top: 12px; }
   .scope-box code { font-family: monospace; background: #eee; padding: 2px 6px; border-radius: 3px; font-size: 0.9em; }
+  .login-box { background: #fff8f8; border: 2px solid #e63946; border-radius: 10px; padding: 28px 24px; text-align: center; margin-top: 12px; }
+  .login-box p { margin-bottom: 20px; }
+  .btn-tiktok { display: inline-flex; align-items: center; gap: 10px; background: #000; color: #fff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: background 0.2s; }
+  .btn-tiktok:hover { background: #333; }
+  .btn-tiktok svg { width: 22px; height: 22px; fill: #fff; }
+  .private-note { margin-top: 14px; font-size: 0.85rem; color: #888; }
   footer { background: #f4f4f4; text-align: center; padding: 24px 20px; font-size: 0.9rem; color: #888; }
   footer a { color: #e63946; text-decoration: none; margin: 0 10px; }
   footer a:hover { text-decoration: underline; }
@@ -26,7 +35,10 @@
 <body>
 
 <header>
-  <h1>MomenNaikSatu</h1>
+  <div class="header-brand">
+    <img src="app-icon-1024.png" alt="MomenNaikSatu">
+    <h1>MomenNaikSatu</h1>
+  </div>
   <p>Konten edukasi dan motivasi untuk anak muda Indonesia</p>
 </header>
 
@@ -42,6 +54,18 @@
     <h2>Tentang Aplikasi Ini</h2>
     <p>Aplikasi <strong>MomenNaikSatu</strong> adalah alat otomasi pengunggahan konten yang digunakan oleh pengelola channel untuk memposting video secara terjadwal ke platform TikTok.</p>
     <p>Aplikasi ini <strong>tidak tersedia untuk publik umum</strong>. Akses hanya diberikan kepada pengelola channel MomenNaikSatu (pemilik akun TikTok terdaftar).</p>
+  </section>
+
+  <section>
+    <h2>Login dengan TikTok</h2>
+    <div class="login-box">
+      <p>Pengelola channel MomenNaikSatu dapat mengotorisasi akses TikTok melalui tombol di bawah ini. Anda akan diarahkan ke halaman login resmi TikTok untuk memberikan izin akses.</p>
+      <a class="btn-tiktok" href="https://www.tiktok.com/v2/auth/authorize?client_key=awwcghw7osz99de0&scope=user.info.basic,video.upload,video.publish&response_type=code&redirect_uri=https%3A%2F%2Fmomennaiksatu.ariefhakim-info.workers.dev%2Fcallback.html&state=login">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.56V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+        Login dengan TikTok
+      </a>
+      <p class="private-note">Akses dibatasi hanya untuk pengelola channel yang terdaftar.</p>
+    </div>
   </section>
 
   <section>
